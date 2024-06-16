@@ -103,9 +103,10 @@ section {
 /* Responsive design for mobile view */
 @media (max-width: 768px) {
     #home h1, #about h2, #portfolio h2, #contact h2, #adjectives h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-bottom: 1rem;
     }
+
     
     #home p, #about p, #portfolio p, #contact p {
         font-size: 1.5rem;

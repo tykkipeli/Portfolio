@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create spans and collect them into an array
     const spans = text.split('').map((char, index) => {
       const span = document.createElement('span')
-      span.innerText = char
+      // Replace space with non-breaking space to preserve it
+      span.innerHTML = char === ' ' ? '&nbsp;' : char
       span.style.setProperty('--i', index)
       element.appendChild(span)
 
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dropAndBounce = (element) => {
     let position = -1000 // Initial position above the screen
-    const gravity = 5 // Increased gravity effect
+    const gravity = 1 // Increased gravity effect
     let velocity = 0
     const bounceDamping = 0.4 // Less bounce height
     const bounceThreshold = 2 // Minimum velocity to trigger a bounce
