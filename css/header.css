@@ -1,0 +1,111 @@
+/* header.css */
+
+/* Header and navigation styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, #141e30 0%, #243b55 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    height: 80px; /* Increased height */
+    transition: transform 0.3s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #141e30 0%, #243b55 100%);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px; /* Increased spacing between items */
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none; /* Remove dots */
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
+    border-radius: 5px;
+}
+
+/* Menu icon style */
+.menu-icon {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Default menu icon (three horizontal lines) */
+.menu-icon i::before {
+    content: '\f0c9'; /* Unicode for Font Awesome bars (menu) icon */
+}
+
+/* Change to 'X' icon when menu is open */
+.menu-icon.open i::before {
+    content: '\f00d'; /* Unicode for Font Awesome 'X' (close) icon */
+}
+
+/* Add smooth transitions */
+nav ul li a {
+    transition: all 0.3s ease;
+}
+
+/* Adding smooth background transition on hover */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border-radius: 5px;
+}
+
+nav.hidden {
+    transform: translateY(-100%);
+}
+
+nav:not(.hidden) {
+    transform: translateY(0);
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 768px) {
+    nav {
+        height: 100vh; /* Fullscreen height */
+        justify-content: flex-start;
+        padding-top: 60px; /* Space for menu icon */
+        align-items: flex-start;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Spacing between items */
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem; /* Larger font for better touch */
+        padding: 1rem;
+    }
+}

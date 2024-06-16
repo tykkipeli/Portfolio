@@ -1,0 +1,63 @@
+/* sections.css */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+#home {
+    background: url('../images/your-image.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+#about, #portfolio, #contact {
+    background: #181818;
+}
+
+#home h1, #about h2, #portfolio h2, #contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#home p, #about p, #portfolio p, #contact p {
+    font-size: 1.5rem;
+}
+
+.content {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.project {
+    background: #282828;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project p {
+    margin-bottom: 0.5rem;
+}
+
+.project a {
+    color: #1e90ff;
+    border: 1px solid #1e90ff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.project a:hover {
+    background: #1e90ff;
+    color: #fff;
+}
