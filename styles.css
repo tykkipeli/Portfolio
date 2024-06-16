@@ -1,26 +1,27 @@
 /* styles.css */
 
 /* Reset some default browser styles */
-body, h1, h2, h3, p, ul, li, a {
+body, h1, h2, p, ul, li, a, button, form, input, textarea {
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+    font-size: 16px;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
 }
 
 header {
-    background: #333;
-    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #222;
+    z-index: 1000;
     padding: 1rem 0;
-    text-align: center;
 }
 
 nav ul {
@@ -33,39 +34,52 @@ nav ul li a {
     color: #fff;
     padding: 10px 15px;
     display: inline-block;
-    transition: background 0.3s;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background: #444;
+    color: #1e90ff;
 }
 
 section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 2rem;
-    max-width: 800px;
-    margin: auto;
+    transition: background 0.3s, color 0.3s;
 }
 
 #home {
-    background: #333;
+    background: url('images/your-image.jpg') no-repeat center center/cover;
     color: #fff;
-    text-align: center;
-    padding: 2rem 1rem;
 }
 
-#about img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem 0;
+#about, #portfolio, #contact {
+    background: #181818;
+}
+
+#home h1, #about h2, #portfolio h2, #contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#home p, #about p, #portfolio p, #contact p {
+    font-size: 1.5rem;
+}
+
+.content {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
 }
 
 .project {
-    background: #fff;
+    background: #282828;
     padding: 1rem;
-    margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .project h3 {
@@ -77,48 +91,56 @@ section {
 }
 
 .project a {
-    color: #333;
-    border: 1px solid #333;
+    color: #1e90ff;
+    border: 1px solid #1e90ff;
     padding: 5px 10px;
     border-radius: 3px;
     transition: background 0.3s, color 0.3s;
 }
 
 .project a:hover {
-    background: #333;
+    background: #1e90ff;
     color: #fff;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    max-width: 400px;
+    margin: auto;
 }
 
 label {
     margin-bottom: 0.5rem;
+    text-align: left;
 }
 
-input, textarea, button {
-    margin-bottom: 1rem;
+input, textarea {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    border: 1px solid #555;
     border-radius: 5px;
+    background: #222;
+    color: #fff;
 }
 
 button {
-    background: #333;
+    background: #1e90ff;
     color: #fff;
-    cursor: pointer;
+    padding: 0.5rem;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #555;
+    background: #63a4ff;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: #222;
+    color: #aaa;
     text-align: center;
     padding: 1rem;
     position: fixed;
