@@ -128,7 +128,7 @@ section {
 .adjectives {
     position: relative; /* Container for absolute positioning */
     width: 100vw; /* Full viewport width */
-    height: 50px; /* Adjust height as needed */
+    height: 150px; /* Adjust height as needed */
     overflow: hidden; /* Hide overflow */
     display: flex;
     justify-content: center;
