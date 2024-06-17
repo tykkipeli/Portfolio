@@ -20,7 +20,14 @@
             </ul>
         </nav>
         <div id="menu-icon" class="menu-icon">
-            <i class="fas fa-bars"></i>
+            <svg id="menu-bars" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="2" y1="5" x2="22" y2="5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <line x1="2" y1="12" x2="22" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <svg id="menu-close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <line x1="6" y1="18" x2="18" y2="6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
         </div>
     </header>
     
@@ -99,6 +106,7 @@
         const navbar = document.getElementById('navbar');
     
         menuIcon.addEventListener('click', () => {
+            console.log('Menu icon clicked');
             navbar.classList.toggle('hidden');
             menuIcon.classList.toggle('open');
         });
