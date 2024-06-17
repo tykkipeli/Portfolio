@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const dropAndBounce = (element) => {
     let position = -1000 // Initial position above the screen
-    const gravity = 1 // Increased gravity effect
+    const gravity = 0.5 // Increased gravity effect
     let velocity = 0
     const bounceDamping = 0.4 // Less bounce height
     const bounceThreshold = 2 // Minimum velocity to trigger a bounce

@@ -38,5 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   updateAdjective() // Initial call
-  setInterval(updateAdjective, 3100) // Update every 5 seconds
+  setInterval(updateAdjective, 3100) // Update every 3.1 seconds
 })
