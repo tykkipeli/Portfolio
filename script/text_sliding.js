@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
   const adjectives = [
     'Innovative',
-    'Agile',
-    'Elegant',
-    'Aesthetic',
     'Ambitious',
+    'Elegant',
+    'Agile',
+    'Resourceful',
     'Creative',
     'Collaborative',
-    'Resourceful',
+    'Aesthetic',
   ]
   const displayElement = document.getElementById('adjective-display')
   let index = 0
