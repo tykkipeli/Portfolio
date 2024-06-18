@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+
 section {
     display: flex;
     justify-content: center;
@@ -13,7 +14,7 @@ section {
 
 #home {
     background: url('../images/your-image.jpg') no-repeat center center/cover;
-    color: #fff;
+    color: #f8f2dc;
 }
 
 #about, #portfolio, #contact {

@@ -40,13 +40,13 @@ nav {
     top: 0;
     left: 0;
     background: linear-gradient(
-        to bottom,
-        rgb(19, 2, 19, 1) 5%,  /* Stronger opacity at the top */
-        rgba(19, 2, 19, 0.9) 40%,   /* Intermediate stop */
-        rgba(19, 2, 19, 0.8) 60%,   /* Further fade */
-        rgba(19, 2, 19, 0.1) 90%,   /* Near transparent towards the bottom */
-        rgba(19, 2, 19, 0) 100%     /* Fully transparent at the bottom */
-    );
+    to bottom,
+    rgba(18, 21, 25, 1) 0%,
+    rgba(18, 21, 25, 0.8) 50%,
+    rgba(18, 21, 25, 0.5) 75%,
+    rgba(18, 21, 25, 0.2) 90%,
+    rgba(18, 21, 25, 0) 100%
+);
     font-weight: 100;
     letter-spacing: 0.2em;
 }
@@ -67,9 +67,9 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f8f2dc;
     padding: 10px 15px;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -90,9 +90,9 @@ nav ul li a:hover {
 .menu-icon svg {
     width: 24px;
     height: 24px;
-    color: #fff;
+    color: #f8f2dc;
     fill: none;
-    stroke: #fff;
+    stroke: #f8f2dc;
     stroke-width: 2; /* Control thickness */
     stroke-linecap: round;
 }
