@@ -1,0 +1,91 @@
+.card-container {
+    perspective: 1000px; /* Create perspective for 3D effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Ensure it takes full height */
+    position: relative; /* Ensure positioning */
+}
+
+.card {
+    width: 400px;  /* Increased width */
+    height: 600px; /* Increased height */
+    position: relative;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+    transition: transform 1s; /* Smooth transition */
+    cursor: pointer;
+}
+
+/* Hover effect for card flip */
+
+
+.card:not(.flipped):hover {
+    transform: rotateY(180deg); /* Rotate card to show the back */
+}
+
+/* Apply the .flipped effect for click interactions */
+.card.flipped {
+    transform: rotateY(180deg); /* Rotate card to show the back */
+}
+
+.card-face {
+    position: absolute; /* Position absolutely within .card */
+    width: 100%; /* Full width of .card */
+    height: 100%; /* Full height of .card */
+    backface-visibility: hidden; /* Hide back face when turned around */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    /* Remove padding to prevent content overflow */
+    padding: 0;
+    margin: 0;
+}
+
+.card-front {
+    background-color: red; /* Set background color to red */
+    display: flex; /* Use flex to center text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: #fff; /* Set text color to white */
+    font-size: 2rem; /* Adjust font size */
+    border-radius: 10px; /* Ensure it has rounded corners */
+    text-align: center; /* Center text alignment */
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the card */
+    border-radius: 10px;
+}
+
+.card-back {
+    background-color: #eee;
+    transform: rotateY(180deg); /* Start with back face turned around */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+
+@media (hover: none) {
+    .card:hover {
+        transform: none; /* Disable hover effect on touch devices */
+    }
+}

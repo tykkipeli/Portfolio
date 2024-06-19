@@ -49,8 +49,16 @@
     
     <section id="about">
         <div class="content">
-            <h2>About Me</h2>
-            <p>[A brief introduction about yourself]</p>
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-face card-front">
+                        <p>Discover</p>
+                    </div>                    
+                    <div class="card-face card-back">
+                        <p>This is the back side with text.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -100,6 +108,15 @@
                 document.getElementById('menu-icon').classList.remove('open'); // Change icon to bars
             });
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const card = document.querySelector('.card');
+
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+
     
         // Toggle menu
         const menuIcon = document.getElementById('menu-icon');
