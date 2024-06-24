@@ -41,6 +41,7 @@
     /* Remove padding to prevent content overflow */
     padding: 0;
     margin: 0;
+    border: 1px solid #464e59;
 }
 
 .card-front::before {
@@ -77,19 +78,21 @@
 }
 
 .card-back {
-    background-color: #eee;
+    background-color: #121519;
     transform: rotateY(180deg); /* Start with back face turned around */
     display: flex;
     justify-content: flex-start; /* Align items to the start horizontally */
     align-items: flex-start; /* Align items to the start vertically */
-    color: red;
+    color: #f8f2dc;
     text-align: left; /* Left-align text */
     box-sizing: border-box;
 }
 
 .card-back p {
     margin: 15%;
-    font-size: 1.3rem;
+    margin-top: 35%;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
 }
 
 .text-container {
@@ -98,16 +101,17 @@
     width: 100%; /* Full width */
     text-align: center; /* Center text */
     z-index: 3; /* Ensure text is above other overlays */
-    color: #fff; /* Text color */
+    color: #e316af; /* Text color */
     padding: 10px;
     box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .text-container p {
-    color: #1e90ff;
+    color: #8993f7;
     margin: 0; /* Remove default margin */
     font-size: 3rem; /* Font size */
     font-weight: bold;
+    letter-spacing: 0.02em;
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.9), /* First shadow layer */
                  6px 6px 5px rgba(0, 0, 0, 0.7), /* Second shadow layer */
                  9px 9px 10px rgba(0, 0, 0, 0.5); /* Third shadow layer */

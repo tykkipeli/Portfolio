@@ -18,7 +18,7 @@ section {
 }
 
 #about, #portfolio, #contact {
-    background: #181818;
+    background: #121519;
 }
 
 #home h1, #about h2, #portfolio h2, #contact h2, #adjectives h2 {
@@ -54,7 +54,6 @@ section {
 
 
 .project {
-    background: #282828;
     padding: 1rem;
     border-radius: 5px;
     margin-bottom: 1rem;
@@ -138,7 +137,19 @@ section {
     align-items: center;
 }
 
-
+.contact-text {
+    font-size: 4rem;
+    font-weight: 1000;
+    letter-spacing: 0.02em;
+    text-align: left; /* Keskittää tekstin */
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px; /* Neliön muotoinen alue */
+    height: 300px; /* Neliön muotoinen alue */
+    color: #f8f2dc;
+}
 
 
 /* Responsive design for mobile view */
