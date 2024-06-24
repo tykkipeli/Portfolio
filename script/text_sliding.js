@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const updateAdjective = () => {
-    console.log('Updating adjective:', adjectives[index])
     displayElement.style.transition = 'none' // Remove previous transition
     displayElement.style.transform = 'translateX(-100vw)' // Move off-screen to the far left
 
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       displayElement.style.transform = 'translateX(0)' // Slide to center
 
       setTimeout(() => {
-        console.log('Sliding out:', adjectives[index])
         displayElement.style.transition = 'transform 1s ease-in'
         displayElement.style.transform = 'translateX(100vw)' // Slide out to the far right
       }, 2000) // Pause duration in center

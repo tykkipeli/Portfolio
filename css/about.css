@@ -9,7 +9,7 @@
 }
 
 .card {
-    width: 400px;  /* Increased width */
+    width: 500px;  /* Increased width */
     height: 600px; /* Increased height */
     position: relative;
     transform-style: preserve-3d; /* Enable 3D transformations */
@@ -35,24 +35,37 @@
     height: 100%; /* Full height of .card */
     backface-visibility: hidden; /* Hide back face when turned around */
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 50px;
     /* Remove padding to prevent content overflow */
     padding: 0;
     margin: 0;
 }
 
+.card-front::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
+
 .card-front {
-    background-color: red; /* Set background color to red */
+    background-image: url('../images/kuva.jpeg'); /* Path to your image */
+    background-size: cover; /* Scale the image to cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; 
     display: flex; /* Use flex to center text */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     color: #fff; /* Set text color to white */
     font-size: 2rem; /* Adjust font size */
-    border-radius: 10px; /* Ensure it has rounded corners */
+    border-radius: 50px; /* Ensure it has rounded corners */
     text-align: center; /* Center text alignment */
 }
 
@@ -60,19 +73,44 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure image covers the card */
-    border-radius: 10px;
+    border-radius: 50px;
 }
 
 .card-back {
     background-color: #eee;
     transform: rotateY(180deg); /* Start with back face turned around */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Align items to the start horizontally */
+    align-items: flex-start; /* Align items to the start vertically */
+    color: red;
+    text-align: left; /* Left-align text */
+    box-sizing: border-box;
 }
 
 .card-back p {
-    margin: 0;
+    margin: 15%;
+    font-size: 1.3rem;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 5%; /* Position 20% from the bottom */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+    z-index: 3; /* Ensure text is above other overlays */
+    color: #fff; /* Text color */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.text-container p {
+    color: #1e90ff;
+    margin: 0; /* Remove default margin */
+    font-size: 3rem; /* Font size */
+    font-weight: bold;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.9), /* First shadow layer */
+                 6px 6px 5px rgba(0, 0, 0, 0.7), /* Second shadow layer */
+                 9px 9px 10px rgba(0, 0, 0, 0.5); /* Third shadow layer */
 }
 
 
