@@ -56,10 +56,13 @@ nav {
     font-size: 5px;
 }
 
+
 nav ul {
     display: flex;
     gap: 30px; /* Increased spacing between items */
     padding: 0;
+    width: 100%; /* Ensure ul takes full width */
+    justify-content: center; /* Center items horizontally */
 }
 
 nav ul li {

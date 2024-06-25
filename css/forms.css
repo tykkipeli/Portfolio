@@ -8,17 +8,30 @@ form {
 }
 
 label {
-    margin-bottom: 0.5rem;
+    margin-bottom: 2.5rem;
+    margin-top: 1rem;
     text-align: left;
+    letter-spacing: 0.1em;
+    color: #f8f2dc; /* Ensure label text is visible */
 }
 
 input, textarea {
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     margin-bottom: 1rem;
-    border: 1px solid #555;
-    border-radius: 5px;
-    background: #222;
+    border: none;
+    border-bottom: 1px solid #555;
+    background: none;
     color: #fff;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #888; /* Placeholder color */
+}
+
+input:focus, textarea:focus {
+    border-bottom: 1px solid #1e90ff; /* Change border color on focus */
 }
 
 button {

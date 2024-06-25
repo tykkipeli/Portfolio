@@ -1,0 +1,121 @@
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    position: relative; /* Ensure position relative for the container */
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.button {
+    display: inline-block;
+    padding: 70px 80px;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    background: #121519;
+    border: 1px solid #ff4e50; /* Add a border with a color */
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    position: absolute;
+    font-size: 8rem;
+    color: #ff4e50;
+}
+
+.arrow-left {
+    font-weight: bold;
+    left: -30px; /* Adjust distance from the button */
+    animation: moveRight 1s infinite alternate;
+}
+
+.arrow-right {
+    font-weight: bold;
+    right: -30px; /* Adjust distance from the button */
+    animation: moveLeft 1s infinite alternate;
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .buttons-container {
+        flex-direction: column;
+        align-items: center; /* Center align the buttons and arrows */
+    }
+
+    .button-wrapper {
+        position: relative;
+        margin-bottom: 50px; /* Space between the button and the arrow below */
+    }
+
+    .button {
+        padding: 30px 40px;
+    }
+
+    .arrow-left {
+        left: 50%; /* Center horizontally */
+        top: 50px;
+        transform: translateX(-50%) translateY(-100%) rotate(90deg); /* Rotate to point down */
+        animation: moveDown 1s infinite alternate;
+    }
+
+    .arrow-right {
+        left: 50%; /* Center horizontally */
+        bottom: 100px;
+        transform: translateX(-50%) translateY(100%) rotate(-90deg); /* Rotate to point up */
+        animation: moveUp 1s infinite alternate;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateX(-50%) translateY(-100%) rotate(90deg);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-90%) rotate(90deg);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateX(-50%) translateY(100%) rotate(90deg);
+    }
+    100% {
+        transform: translateX(-50%) translateY(90%) rotate(90deg);
+    }
+}
