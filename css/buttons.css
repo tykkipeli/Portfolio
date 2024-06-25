@@ -15,26 +15,30 @@
 .button {
     display: inline-block;
     padding: 70px 80px;
-    font-size: 1.5rem;
-    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    color: #f8f2dc;
     text-decoration: none;
     background: #121519;
     border: 1px solid #ff4e50; /* Add a border with a color */
     border-radius: 50px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, color 0.3s, background 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
 }
 
 .button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 10px rgba(255, 78, 80, 0.5); /* Add hohtava efekti */
+    color: #ff4e50; /* Change text color */
+    background: #181b20; /* Slightly lighter background */
 }
 
 .button:active {
     transform: translateY(0);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
 
 .arrow {
     position: absolute;
