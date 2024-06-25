@@ -18,8 +18,6 @@
 }
 
 /* Hover effect for card flip */
-
-
 .card:not(.flipped):hover {
     transform: rotateY(180deg); /* Rotate card to show the back */
 }
@@ -52,9 +50,10 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    backface-visibility: hidden; /* Hide back face when turned around */
     z-index: 1; /* Ensure overlay is above the image */
+    border-radius: 50px;
 }
-
 
 .card-front {
     background-image: url('../images/kuva.jpeg'); /* Path to your image */
@@ -68,18 +67,11 @@
     font-size: 2rem; /* Adjust font size */
     border-radius: 50px; /* Ensure it has rounded corners */
     text-align: center; /* Center text alignment */
-}
-
-.card-front img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure image covers the card */
-    border-radius: 50px;
+    backface-visibility: hidden; /* Hide when the card is flipped */
 }
 
 .card-back {
     background-color: #121519;
-    transform: rotateY(180deg); /* Start with back face turned around */
     display: flex;
     justify-content: flex-start; /* Align items to the start horizontally */
     align-items: flex-start; /* Align items to the start vertically */
@@ -100,7 +92,7 @@
     bottom: 5%; /* Position 20% from the bottom */
     width: 100%; /* Full width */
     text-align: center; /* Center text */
-    z-index: 3; /* Ensure text is above other overlays */
+    z-index: 2; /* Ensure text is above the overlay */
     color: #e316af; /* Text color */
     padding: 10px;
     box-sizing: border-box; /* Include padding in width calculation */
@@ -117,6 +109,15 @@
                  9px 9px 10px rgba(0, 0, 0, 0.5); /* Third shadow layer */
 }
 
+.card-face {
+    backface-visibility: hidden; /* Ensure both faces have this */
+    transform: rotateY(0deg); /* Ensure proper initial rotation */
+}
+
+.card-back {
+    backface-visibility: hidden;
+    transform: rotateY(180deg); /* Ensure back face is initially rotated */
+}
 
 @media (max-width: 768px) {
     .card {
@@ -124,7 +125,6 @@
         height: 300px;
     }
 }
-
 
 @media (hover: none) {
     .card:hover {
